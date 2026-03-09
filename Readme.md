@@ -10,32 +10,29 @@ A FastAPI-based file upload service designed for Retrieval-Augmented Generation 
 - **Hot reload development** server
 
 ## Project Structure
+```text
 full-rag/
 ├── app/
 │   ├── main.py
-│   ├── server.py
+│   ├── server.py       # FastAPI application with upload endpoint
 │   └── utils/
-│       └── file.py
-├── run.sh
-├── freeze.sh
-└── requirements.txt
-
+│       └── file.py     # Async file operations
+├── run.sh              # Start development server
+├── freeze.sh           # Generate requirements.txt
+└── requirements.txt    # Python dependencies
 
 ## Setup
 
 1. Install dependencies:
-
-Bash
+```Bash
 pip install -r requirements.txt
 
 2. Set up upload directory:
 
-Bash
 sudo mkdir -p /mnt/uploads
 sudo chown -R $(whoami) /mnt/uploads
 
 3. Run the server:
 
-Bash
 sh run.sh
 The API will be available at: http://localhost:8000
